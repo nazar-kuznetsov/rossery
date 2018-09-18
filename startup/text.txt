@@ -1,0 +1,378 @@
+﻿Выборка Элементов
+0. ('*') выбрать все
+1. div ~ p (найти p на одном уровнем вложености с div)
+2. div + p (найти p который будет сразу за div)
+3. div > p (найти p который будет прямым потомком div)
+4. a[href^=http] (найти все a у которых href будет начинасстья с http)
+5. a[href*="codeharmony"] (codeharmony может быть в люьой части атрибута hrref)
+
+1. между классами в html 2 пробела
+2. название главного блоко не должно быть на всю арархию
+3. Img В логотипе можно не давать клас а сделать через каскад
+4. tr можно не давать класс и использывать каскад
+5. строчные элименты не обезятельно давать клас и можно использывать каскад
+6. прячим заголовок если нужна семантика
+7. Кнопки это всегда бэм блок тоесть просто button только через тэг <a></a>
+8. Blockquote внутрь него можно кладимать div
+9. номер теелфона это ссылка href="tel: 38067253038"
+10. контакты адрес можно указать в тэге <p></p>
+
+
+Название
+1. Intro (Вступление)
+2. descriptions (Описание)
+3. value (стоимость)
+4. field (Поле)
+5. advantages (преимущество)
+6. news (Новости)
+7. data(Дата) использывать тэг time
+8. Reviews(отзывы)
+9. Slider(Слайдер)
+10.Cite(Имя автора цитацы)
+11.Menu Profile(Вход выйти)
+12.offer (предлагает)
+13.route (мартшут)
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+
+
+
+
+
+NODEJS
+=======================================
+app.use(require("cors")()) // allow Cross-domain requests
+Для междоменных запросов нам понадобится use(require(cors)). Это запросы от веб-сайта, который хостится в одном домене, к серверу в другом домене.
+
+
+
+
+
+
+
+
+
+2. F1 = показать/скрыть боковую панель
+3. ALT + Q = Сортировать CssComb
+4. ALT + E = Выделить одинаковые слова
+5. ALT + ` = показать/сркрыть терминал
+6. CTRL + D = скопировать всью строчку и вставить снизу
+7. ALT + верх, или ALT + низ = переместить строчку верх или вниз
+8. CTRL + ALT + стрелки верх или вниз = Множественные курсоры
+9. SHIFT + ALT + A = Быстрый коминтарий
+
+git
+
+git clone + ссылка с пример https://github.com/nazar-kuznetsov/nazar-kuznetsov.github.io.git клонировать репоззиторию в в туекщую папку
+
+
+
+1. F2 = Переиминовать символ
+2. CTRL + B = показать/скрыть боковую панель
+3. ALT + Q = Сортировать CssComb
+4. ALT + E = Выделить одинаковые слова
+5. ALT + ` = показать/сркрыть терминал
+6. CTRL + D = скопировать всью строчку и вставить снизу
+7. ALT + верх, или ALT + низ = переместить строчку верх или вниз
+8. CTRL + ALT + стрелки верх или вниз = Множественные курсоры
+9. SHIFT + ALT + A = Быстрый коминтарий
+
+
+
+npm
+# Устанавливает все пакеты, перечисленные в package.json
+npm install
+Terminal
+
+cd site1 // Перейти в папку site1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+localstorage
+
+localStorage.setItem('check', JSON.stringify(res)); // сохранить в localstorage
+const local = JSON.parse(localStorage.getItem('check')); // получить в localstorage
+
+
+
+
+function createElement(tag, props, ...children) {
+    const element = document.createElement(tag);
+
+    Object.keys(props).forEach(key => { element[key] = props[key] })
+
+
+    children.forEach(function (item) {
+      if (typeof item === 'string') {
+
+        item = document.createTextNode(item);
+      }
+
+      element.appendChild(item);
+    })
+
+    return element;
+  }
+
+  const input = createElement('input', { className: 'input', type: 'checkbox' })
+  const editButton = createElement('button', { className: 'edit-button', type: 'button' }, 'Изменить')
+  const deleteButton = createElement('button', { className: 'delete-button', type: 'button' }, 'Удалить')
+  const todoItem = createElement('li', { className: 'todo-item' }, input, editButton, deleteButton)
+
+
+
+
+
+
+
+/*              Базовый набор JavaScript алгоритмов: для начинающих
+===========================================================================================
+===========================================================================================
+===========================================================================================
+===========================================================================================
+===========================================================================================
+*/
+
+
+
+/* 1. Получить маскимальное и манимальное число в массиве
+===========================================================================================*/
+const arrNumber = [5, 10, 4, -8, 2];
+
+const max = Math.max.apply(null, arrNumber); // 10
+const min = Math.min.apply(null, arrNumber); // -8
+
+
+
+/* 2. Коллекция уникальных значений, которые могут быть любого типа.
+===========================================================================================*/
+const repeatArr = [5, 2, 5, 'Назар', 0, 2, 'Назар'];
+
+const uniq = [...new Set(repeatArr)]; // [5, 2, "Назар", 0]
+
+
+
+/* 3. Сортировка пузеркем
+===========================================================================================*/
+const arrNum = [8, 4, 6, -2, 0, 1, 7, 5, 15];
+
+for (let j = 0; j < arrNum.length; j++) {
+
+  for (let i = 0; i < arrNum.length; i++) {
+    if (arrNum[i] > arrNum[i + 1]) {
+      const maxNumber = arrNum[i];
+      arrNum[i] = arrNum[i + 1];
+      arrNum[i + 1] = maxNumber;
+    }
+  }
+
+} // [-2, 0, 1, 4, 5, 6, 7, 8, 15]
+
+
+
+/* 4. Обновление объекта в массиве по свойству
+      Мы обновим объект с id: 3 в массиве.
+===========================================================================================*/
+const initial = [
+  { id: 1, score: 1 },
+  { id: 2, score: 2 },
+  { id: 3, score: 4 }
+];
+
+const newValue = { id: 3, score: 3 };
+
+const updated = initial.map(item => item.id === newValue.id ? newValue : item);
+//  [ { id: 1, score: 1  }, { id: 2, score: 2  }, { id: 3, score: 3  }  ]
+
+
+
+/* 5. Удаление объекта из массива по свойству
+Давайте удалим объект из массива, для которого id === 3
+===========================================================================================*/
+const removeId = 3;
+
+const filterArr = initial.filter(item => item.id !== removeId);
+// [ { id: 1, score: 1  }, { id: 2, score: 2  }  ]
+
+
+
+/* 6. Удаления ключа из объекта
+Мы можем использовать деструктуризацию в обратном направлении:
+===========================================================================================*/
+
+
+
+
+
+/* 7. Сделать из вложенных массов один массив через рекурсию
+===========================================================================================*/
+const ar = [[[2], 5, [[[[[700]]]]]], [3, 1, 4], [6, [[[8]]], 9]];
+
+function flatten(arr) {
+  return arr.reduce(function(total, el) {
+    if (Array.isArray(el)) {
+      return total.concat(flatten(el));
+    }
+
+    return total.concat(el);
+  }, []);
+}
+
+console.log(flatten(ar)); // [2, 5, 700, 3, 1, 4, 6, 8, 9]
+
+
+
+
+
+
+
+
+
+
+
+/* Настройки для VS CODE
+=======================================================================*/
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию.
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+   // "editor.fontSize": 13,
+    "editor.lineHeight": 24,
+    //"Change AL Lfonts throughout application": "Fira Code",
+   //"editor.letterSpacing": -0.2,
+    "editor.scrollbar.verticalScrollbarSize": 10,
+ //  "editor.fontFamily": "Roboto Mono",
+  // "editor.fontFamily": "DejaVu Sans Mono",
+   //  "editor.fontFamily": "Inconsolata LGC",
+  // "editor.fontFamily": "Menlo",
+    "editor.renderWhitespace": "none",
+    "workbench.statusBar.visible": true,
+    "workbench.fontAliasing": "antialiased",
+    "terminal.integrated.cursorStyle": "line",
+    "[javascript]": {},
+    "files.exclude": {
+      "**/node_modules": true,
+      //".jshintrc": true,
+      ".eslintrc.json": true,
+      ".vscode": true,
+      //"package.json": true,
+      "package-lock.json": true,
+      "jsconfig.json": true,
+      ".vs": true,
+      ".csscomb.json": true
+    },
+    "search.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "src/libs/*": true,
+      "build": true
+    },
+    "files.associations": {
+      "*.js": "javascriptreact",
+      "*.scss": "scss"
+    },
+    "editor.tokenColorCustomizations": {
+      "[Default Dark+]": {
+        //"variables": "#d4d4d4",
+        //"functions": "#d7ba7d",
+        //"functions": "#66d9ef",
+      },
+    },
+    /*
+    "workbench.colorCustomizations": {
+       // "editor.background": "#1E1E1E",
+        "sideBar.background": "#1E1E1E",
+        //"contrastActiveBorder": "#475A7A",
+        //"list.activeSelectionBackground": "#004E9B",
+        //"editor.wordHighlightBackground": "#004E9B",
+        //"list.inactiveSelectionBackground": "#004E9B",
+        //"list.hoverBackground": "#5C2D91",
+        //"tab.activeBackground": "#120cc9",
+       // "editorWarning.foreground": "#2eff00",
+        "activityBar.background": "#1E1E1E",
+        //"editor.lineHighlightBackground":"#2e353f",
+        "terminal.background": "#1E1E1E",
+        //"focusBorder": "#5C2D91",
+        //"editor.lineHighlightBorder": "#bbb",
+        "statusBar.background": "#1E1E1E",
+        "panel.border": "#1E1E1E",
+        "panel.background": "#1E1E1E",
+       // "editor.selectionBackground": "#475A7A",
+        //"editor.selectionHighlightBackground": "#475A7A",
+       // "editor.findMatchBackground": "#475A7A"
+    },
+  */
+
+
+    "editor.renderControlCharacters": false,
+    "scss.lint.important": "warning",
+    "scss.lint.idSelector": "warning",
+    "html.format.wrapLineLength": 80,
+    "terminal.integrated.fontSize": 13,
+    "grunt.autoDetect": "off",
+    "editor.tabSize": 2,
+    "git.enabled": true,
+    "terminal.integrated.cursorBlinking": true,
+    "editor.minimap.enabled": false,
+    "extensions.autoUpdate": false,
+    "editor.fontWeight": "400",
+    "css.validate": false,
+    "css.lint.vendorPrefix": "ignore",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.universalSelector": "warning",
+    "css.lint.zeroUnits": "warning",
+    "css.lint.propertyIgnoredDueToDisplay": "warning",
+    "scss.lint.vendorPrefix": "ignore",
+    "scss.lint.duplicateProperties": "warning",
+    "terminal.integrated.enableBold": false,
+    "terminal.integrated.confirmOnExit": true,
+    "git.autorefresh": true,
+    "git.autofetch": true,
+    "editor.snippetSuggestions": "top",
+    "git.enableSmartCommit": true,
+    "terminal.integrated.lineHeight": 1,
+    //"editor.renderLineHighlight": "none",
+    "workbench.startupEditor": "none",
+    "scss.lint.universalSelector": "warning",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.iconTheme": "simple-icons",
+    "editor.renderLineHighlight": "line",
+    "editor.cursorStyle": "line-thin",
+    "editor.fontLigatures": true,
+    "explorer.autoReveal": false,
+    "editor.lineNumbers": "on",
+    "editor.renderIndentGuides": false,
+    "window.zoomLevel": 0,
+    "editor.glyphMargin": true,
+    "editor.folding": true,
+    "css.lint.important": "ignore",
+    "files.trimTrailingWhitespace": false,
+    "csscomb.syntaxAssociations": {
+      "postcss": "scss",
+    },
+    "csscomb.preset": ".csscomb.json",
+    "html.suggest.angular1": false,
+    "workbench.editor.tabSizing": "shrink",
+    "editor.smoothScrolling": true,
+  //"terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
+    "workbench.editor.enablePreview": false,
+    "editor.trimAutoWhitespace": true
+  }
