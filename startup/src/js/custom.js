@@ -46,6 +46,10 @@ $(function () {
 
 });
 
+
+
+
+
 var modalBtn = document.querySelectorAll('.modal-btn');
 var closeBtn = document.querySelectorAll('.modal-close');
 
@@ -59,11 +63,11 @@ overlay.forEach(function (element) {
   })
 })
 
-modalBtn.forEach(function(link) {
+modalBtn.forEach(function (link) {
   link.addEventListener('click', getModal);
 });
 
-closeBtn.forEach(function(close) {
+closeBtn.forEach(function (close) {
   close.addEventListener('click', getClose);
 });
 
@@ -83,113 +87,118 @@ function getModal(e) {
 }
 
 function openModal(id) {
- var modal = document.querySelector(id);
- modal.classList.add('modal-open');
+  var modal = document.querySelector(id);
+  modal.classList.add('modal-open');
 }
 
 
-
-function closeModal() {
-
-}
+var btnMapChange = document.querySelector('#btn-map-change');
+var rightCol = document.querySelector('.right-col');
 
 
+btnMapChange.addEventListener('click', function (e) {
+  e.preventDefault();
+  rightCol.classList.toggle('open-map');
+  this.classList.toggle('icon-map-close');
+})
 
 
 
+// .docs a.docs a
 
-google.maps.event.addDomListener(window, 'load', init);
 
-function init() {
-  var mapOptions = {
-    zoom: 15,
-    disableDefaultUI: true,
-    scrollwheel: true,
+    google.maps.event.addDomListener(window, 'load', init);
 
-    center: new google.maps.LatLng(50.468006,30.609616),
+    function init() {
+      var mapOptions = {
+        zoom: 15,
+        disableDefaultUI: true,
+        scrollwheel: true,
 
-    styles: [{
-        "featureType": "landscape",
-        "elementType": "labels",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "featureType": "transit",
-        "elementType": "labels",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "featureType": "poi",
-        "elementType": "labels",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "featureType": "road",
-        "elementType": "labels.icon",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "stylers": [{
-            "hue": "#00aaff"
+        center: new google.maps.LatLng(50.468006, 30.609616),
+
+        styles: [{
+            "featureType": "landscape",
+            "elementType": "labels",
+            "stylers": [{
+              "visibility": "off"
+            }]
           },
           {
-            "saturation": -100
+            "featureType": "transit",
+            "elementType": "labels",
+            "stylers": [{
+              "visibility": "off"
+            }]
           },
           {
-            "gamma": 2.15
+            "featureType": "poi",
+            "elementType": "labels",
+            "stylers": [{
+              "visibility": "off"
+            }]
           },
           {
-            "lightness": 12
+            "featureType": "water",
+            "elementType": "labels",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "stylers": [{
+                "hue": "#00aaff"
+              },
+              {
+                "saturation": -100
+              },
+              {
+                "gamma": 2.15
+              },
+              {
+                "lightness": 12
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+                "visibility": "on"
+              },
+              {
+                "lightness": 24
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{
+              "lightness": 57
+            }]
           }
         ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [{
-            "visibility": "on"
-          },
-          {
-            "lightness": 24
-          }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [{
-          "lightness": 57
-        }]
-      }
-    ]
-  };
+      };
 
 
-  var mapElement = document.getElementById('map');
+      var mapElement = document.getElementById('map');
 
-  var map = new google.maps.Map(mapElement, mapOptions);
-  // var image = "img/elements/map.svg";
-  var myLatLng = new google.maps.LatLng(50.468006,30.609616);
+      var map = new google.maps.Map(mapElement, mapOptions);
+      // var image = "img/elements/map.svg";
+      var myLatLng = new google.maps.LatLng(50.468006, 30.609616);
 
-  new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: '',
-    icon: ''
-  });
-}
+      new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: '',
+        icon: ''
+      });
+    }

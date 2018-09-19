@@ -35,7 +35,7 @@ html {
 
 
 html {
-  font-size: 7.265722379603399vw;
+  font-size: 7.27vw;
 
 }
 
@@ -105,6 +105,14 @@ video {
   padding: px(30);
 }
 
+a:active {
+  color: $main-color;
+}
+
+.docs a {
+  color: $main-color;
+}
+
 
 
 .header {
@@ -159,6 +167,7 @@ video {
 
 
 .header-location {
+  cursor: pointer;
   display: flex;
   background: #fff;
   height: px(40);
@@ -174,6 +183,12 @@ video {
     height: px(16);
     display: block;
 
+  }
+
+  &.icon-map-close {
+    a {
+      background: url('../img/close.svg') no-repeat center center;
+    }
   }
 }
 
@@ -239,6 +254,14 @@ video {
   }
 }
 
+.img-gallery {
+  display: block;
+  transition: 0.3s;
+  background: url('../img/main-photo.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
 .center {
   position: absolute;
   top: 50%;
@@ -261,7 +284,7 @@ video {
   overflow: hidden;
   }
 
-  .map {
+  .skew-overlay-content {
     width: px(1000);
     height: 100vh;
     transform: skew(20deg);
@@ -292,15 +315,43 @@ video {
 .left-col {
   // width: 60%;
   width: px(800);
-   background: url('../img/a_big.svg') no-repeat right 45%;
+  //  background: url('../img/a_big.svg') no-repeat right 45%;
+  //  background-size: px(200) px(350);
+}
 
-   background-size: px(200) px(350);
+.main-row {
+  position: relative;
+}
+
+.a-icon {
+  position: absolute;
+  top: 50%;
+  left: 5.35rem;
+  z-index: -1;
+  width: 2.7rem;
+  transform: translateY(-50%);
+  height: 3.5rem;
+  background: url(../img/a_big.svg) no-repeat center center;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 .right-col {
   width: px(800);
   margin-right: px(-200);
   position: relative;
+  #map {
+
+    display: none;
+  }
+  &.open-map {
+    #map {
+      display: block;
+    }
+    .img-gallery {
+      display: none;
+    }
+  }
 }
 
 .bottom-page {
@@ -382,7 +433,7 @@ video {
   top: 50%;
   transition: 0.3s;
   width: 80%;
-  height: 50vh;
+  height: 70vh;
   left: 50%;
   transform: translate(-50%, -40%);
 
