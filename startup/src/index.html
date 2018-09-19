@@ -44,10 +44,32 @@
               а домівку
             </h1>
             <div class="modal-send">
-              <a class="modal-link" href="#">залишити заявку</a>
+              <a data-modal="#form-modal" class="modal-link modal-btn" href="#">залишити заявку</a>
             </div>
           </div>
         </div>
+
+
+        <div class="bottom-page">
+          <div class="logo">
+            <a href="#">
+              <img src="./img/dim_logo.png" alt=""></a>
+          </div>
+          <ul class="social">
+            <li><a href="#">
+                <a href="#"><img src="./img/fb.svg" alt=""></a>
+              </a></li>
+            <li><a href="#"><img src="./img/youtube.svg" alt=""></a></li>
+          </ul>
+          <div class="docs">
+            <!-- <div class="overlay-modal">
+              <div class="modal">документацiя</div>
+            </div> -->
+            <a class="modal-btn" data-modal="#docs-modal" href="#">документацiя</a>
+          </div>
+        </div>
+
+
       </div>
 
       <div class="right-col">
@@ -63,18 +85,32 @@
 
     </div>
 
-    <div class="container">
-
-    </div>
-
-    <main class="main">
-
-
-    </main>
-
   </div>
 
+  <div id="form-modal" class="overlay-modal">
+    <div class="modal">
+      <p class="title-form">оставить заявку</p>
+      <div class="modal-close"></div>
+      <form action="#" method="POST">
+        <div>
+          <p></p>
+          <input type="text">
+        </div>
+        <div class="form-group">
+          <div><input type="text"></div>
+          <div><input type="text"></div>
+        </div>
+        <button>Отправить</button>
+      </form>
+    </div>
+  </div>
 
+  <div id="docs-modal" class="overlay-modal">
+      <div class="modal">
+        <p class="title-form">Документы</p>
+        <div class="modal-close"></div>
+      </div>
+    </div>
 
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKqbrvha4p20QERUocxfrpfESrUarPZuQ"></script>
   <script defer src="js/scripts.min.js"></script>
