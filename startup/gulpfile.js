@@ -63,7 +63,7 @@ var config = {
     //tunnel: true,
     host: 'localhost',
     port: 3000,
-    open: false,
+    open: true,
     logPrefix: "Developer"
 };
 

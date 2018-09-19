@@ -249,32 +249,38 @@ console.log(flatten(ar)); // [2, 5, 700, 3, 1, 4, 6, 8, 9]
 /* Настройки для VS CODE
 =======================================================================*/
 // Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию.
+// Поместите параметры в этот файл, чтобы перезаписать параметры по умолчанию.
 {
     "window.menuBarVisibility": "toggle",
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
-   // "editor.fontSize": 13,
-    "editor.lineHeight": 24,
-    //"Change AL Lfonts throughout application": "Fira Code",
-   //"editor.letterSpacing": -0.2,
-    "editor.scrollbar.verticalScrollbarSize": 10,
- //  "editor.fontFamily": "Roboto Mono",
-  // "editor.fontFamily": "DejaVu Sans Mono",
-   //  "editor.fontFamily": "Inconsolata LGC",
-  // "editor.fontFamily": "Menlo",
+    "editor.fontFamily": "'Consolas'",
+   // "editor.fontFamily": "'Roboto Mono', 'consolas'",
+    "editor.lineHeight": 22,
+    "editor.scrollbar.verticalScrollbarSize": 6,
     "editor.renderWhitespace": "none",
     "workbench.statusBar.visible": true,
-    "workbench.fontAliasing": "antialiased",
+    "window.titleBarStyle": "custom",
     "terminal.integrated.cursorStyle": "line",
     "[javascript]": {},
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "vue-html": "html"
+    },
+
+    "emmet.syntaxProfiles": {
+      "javascript": "jsx"
+    },
+
     "files.exclude": {
       "**/node_modules": true,
       //".jshintrc": true,
-      ".eslintrc.json": true,
+
+      // ".eslintrc.json": true,
       ".vscode": true,
-      //"package.json": true,
+      // "package.json": true,
       "package-lock.json": true,
-      "jsconfig.json": true,
+      "jsconfig.json": false,
       ".vs": true,
       ".csscomb.json": true
     },
@@ -285,54 +291,44 @@ console.log(flatten(ar)); // [2, 5, 700, 3, 1, 4, 6, 8, 9]
       "build": true
     },
     "files.associations": {
-      "*.js": "javascriptreact",
+      "*.js": "javascript",
       "*.scss": "scss"
     },
-    "editor.tokenColorCustomizations": {
-      "[Default Dark+]": {
-        //"variables": "#d4d4d4",
-        //"functions": "#d7ba7d",
-        //"functions": "#66d9ef",
-      },
-    },
-    /*
-    "workbench.colorCustomizations": {
-       // "editor.background": "#1E1E1E",
-        "sideBar.background": "#1E1E1E",
-        //"contrastActiveBorder": "#475A7A",
-        //"list.activeSelectionBackground": "#004E9B",
-        //"editor.wordHighlightBackground": "#004E9B",
-        //"list.inactiveSelectionBackground": "#004E9B",
-        //"list.hoverBackground": "#5C2D91",
-        //"tab.activeBackground": "#120cc9",
-       // "editorWarning.foreground": "#2eff00",
-        "activityBar.background": "#1E1E1E",
-        //"editor.lineHighlightBackground":"#2e353f",
-        "terminal.background": "#1E1E1E",
-        //"focusBorder": "#5C2D91",
-        //"editor.lineHighlightBorder": "#bbb",
-        "statusBar.background": "#1E1E1E",
-        "panel.border": "#1E1E1E",
-        "panel.background": "#1E1E1E",
-       // "editor.selectionBackground": "#475A7A",
-        //"editor.selectionHighlightBackground": "#475A7A",
-       // "editor.findMatchBackground": "#475A7A"
-    },
-  */
 
+    "workbench.colorCustomizations": {
+      // "editor.background": "#1E1E1E",
+      "sideBar.background": "#1E1E1E",
+      //"contrastActiveBorder": "#475A7A",
+      //"list.activeSelectionBackground": "#004E9B",
+      //"editor.wordHighlightBackground": "#004E9B",
+      //"list.inactiveSelectionBackground": "#004E9B",
+      //"list.hoverBackground": "#5C2D91",
+      //"tab.activeBackground": "#120cc9",
+      // "editorWarning.foreground": "#2eff00",
+      "activityBar.background": "#1E1E1E",
+      //"editor.lineHighlightBackground":"#2e353f",
+      //"terminal.background": "#1E1E1E",
+      //"focusBorder": "#5C2D91",
+      //"editor.lineHighlightBorder": "#bbb",
+       //"statusBar.background": "#1E1E1E",
+      //"panel.border": "#1E1E1E",
+      // "panel.background": "#1E1E1E",
+      //"editor.selectionBackground": "#475A7A",
+      //"editor.selectionHighlightBackground": "#475A7A",
+      // "editor.findMatchBackground": "#475A7A"
+    },
 
     "editor.renderControlCharacters": false,
-    "scss.lint.important": "warning",
-    "scss.lint.idSelector": "warning",
     "html.format.wrapLineLength": 80,
     "terminal.integrated.fontSize": 13,
     "grunt.autoDetect": "off",
     "editor.tabSize": 2,
-    "git.enabled": true,
+    "git.enabled": false,
     "terminal.integrated.cursorBlinking": true,
     "editor.minimap.enabled": false,
     "extensions.autoUpdate": false,
     "editor.fontWeight": "400",
+    // "update.channel": "none",
     "css.validate": false,
     "css.lint.vendorPrefix": "ignore",
     "css.lint.duplicateProperties": "warning",
@@ -353,26 +349,28 @@ console.log(flatten(ar)); // [2, 5, 700, 3, 1, 4, 6, 8, 9]
     "scss.lint.universalSelector": "warning",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "workbench.iconTheme": "simple-icons",
     "editor.renderLineHighlight": "line",
     "editor.cursorStyle": "line-thin",
     "editor.fontLigatures": true,
     "explorer.autoReveal": false,
     "editor.lineNumbers": "on",
-    "editor.renderIndentGuides": false,
+    // "editor.renderIndentGuides": false,
     "window.zoomLevel": 0,
     "editor.glyphMargin": true,
     "editor.folding": true,
     "css.lint.important": "ignore",
-    "files.trimTrailingWhitespace": false,
+    "files.trimTrailingWhitespace": true,
     "csscomb.syntaxAssociations": {
-      "postcss": "scss",
+      "postcss": "scss"
     },
+
     "csscomb.preset": ".csscomb.json",
-    "html.suggest.angular1": false,
-    "workbench.editor.tabSizing": "shrink",
+    "workbench.iconTheme": "simple-icons",
     "editor.smoothScrolling": true,
-  //"terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
-    "workbench.editor.enablePreview": false,
-    "editor.trimAutoWhitespace": true
+    "update.channel": "default",
+    "editor.cursorBlinking": "solid",
+    // "editor.fontFamily": "Consolas",
+    "editor.renderIndentGuides": false,
+    // "editor.fontFamily": "Consolas"
+    // "editor.formatOnSave": true
   }

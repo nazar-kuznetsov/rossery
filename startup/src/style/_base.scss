@@ -1,5 +1,12 @@
 @include reset();
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @font-face {
   font-family: 'Century Gothic';
   src: url('../fonts/CenturyGothic.woff2') format('woff2'),
@@ -29,7 +36,7 @@
 
 html {
   height: 100%;
-  font-size: 5.665722379603399vw;
+  font-size: 7.265722379603399vw;
 
 }
 
@@ -50,6 +57,7 @@ body {
   font-size: px(12);
   font-family: 'Century Gothic';
   font-weight: normal;
+  overflow: hidden;
   line-height: 1.75;
 }
 
@@ -104,26 +112,42 @@ video {
 
 .header {
   display: flex;
-
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: px(30);
+  width: 100%;
   &-contact {
-    position: relative;
     flex-grow: 1;
-    &::before {
-      content: '';
-      display: block;
-      height: px(1);
-      position: absolute;
-      width: 100%;
-      // background-color: $main-color;
-      top: 0;
-      right: 0;
-    }
+    margin-left: px(150);
+
 
     ul {
       display: flex;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        height: px(0.8);
+        margin-left: px(32);
+        flex-grow: 1;
+        background-color: $main-color;
+      }
 
       li {
         font-size: px(11);
+        text-transform: uppercase;
+        position: relative;
+        &:not(:first-child) {
+          margin-left: px(76);
+          &::before {
+            content: '/';
+            position: absolute;
+            left: -25%;
+          }
+        }
 
         a {
           color: $main-color;
@@ -138,15 +162,147 @@ video {
 
 
 .header-location {
-  display: block;
-  // background: lightcyan;
+  display: flex;
+  background: #fff;
   height: px(40);
   width: px(40);
   border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-left: px(32);
+  a {
+    background: url('../img/location.svg') no-repeat center center;
+    width: px(12);
+    background-size: cover;
+    height: px(16);
+    display: block;
+
+  }
 }
 
 .header-logo img {
   display: block;
   width: px(200);
   height: px(40);
+}
+
+.main-title {
+  font-size: px(28);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: px(11);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal-link {
+  color: $yellow;
+  font-size: px(16);
+  font-weight: bold;
+  letter-spacing: px(1.5);
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+    color: #16284A;;
+    margin-right: px(20);
+    content: '+';
+    font-size: px(20);
+  }
+}
+
+.date {
+  margin-bottom: px(10);
+}
+
+.main-title {
+  margin-bottom: px(45);
+  max-width: px(520);
+}
+
+.new-autograf {
+  display: flex;
+  align-items: center;
+  &::after {
+    content: '';
+    background-color: $main-color;
+    margin-left: px(15);
+    width: px(84);
+    height: px(1);
+  }
+}
+
+.center {
+  margin-left: px(160);
+  margin-top: px(200);
+}
+
+#map {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.skew-overlay {
+  transform: skew(-20deg);
+  position: relative;
+  // &::before {
+    //   content: "";
+    //   margin-left: -90px;
+    //   width: 200px;
+    //   height: 0;
+    //   border: 0 solid transparent;
+    //   border-bottom: 1000px solid #fff;
+    // border-left: 100px solid transparent;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+
+    //   z-index: -1;
+    //   overflow: hidden;
+    // }
+    overflow: hidden;
+  }
+
+  .map {
+    width: px(1000);
+    height: px(720);
+
+    transform: skew(20deg);
+  position: relative;
+   left: px(-150);
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   background-color: #fff;
+
+  // }
+}
+
+
+
+.main {
+  display: flex;
+}
+
+.main-row {
+  display: flex;
+}
+
+.left-col {
+  // width: 60%;
+  width: px(800);
+}
+
+.right-col {
+  width: px(800);
+  margin-right: px(-200);
 }
