@@ -1,5 +1,20 @@
 @include reset();
 
+input {
+  border: none;
+  border-bottom: px(1) solid $main-color;
+  // box-shadow: none;
+  outline: none;
+  font-size: px(16);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: px(1.5);
+  color: #16284a;
+  padding-bottom: px(10);
+}
+
+
+
 html {
   box-sizing: border-box;
 }
@@ -35,7 +50,7 @@ html {
 
 
 html {
-  font-size: 7.27vw;
+  font-size: 6.94vw;
 
 }
 
@@ -119,7 +134,7 @@ a:active {
   display: flex;
   align-items: center;
   position: absolute;
-  z-index: 2;
+  z-index: 6;
   box-sizing: border-box;
   padding: px(30);
   width: 100%;
@@ -210,14 +225,106 @@ a:active {
   text-transform: uppercase;
 }
 
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: px(50);
+  margin: 0 px(-32);
+
+  .form-col {
+
+    width: 100%;
+    margin: 0 px(32);
+    position: relative;
+    cursor: pointer;
+    &.filled {
+      label {
+        top: px(-20);
+        font-size: px(11);
+        letter-spacing: 0.3px;
+        color: #dddad7;
+      }
+
+      // input {
+      //   border-bottom: px(1) solid #debfa5;
+      // }
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: px(5) 0;
+    }
+  }
+}
+
+.label-tel {
+  // padding-left: px(40);
+}
+
+.base-tel {
+  display: none;
+  position: absolute;
+  top: 0;
+  color: #debfa5;
+}
+
+input:focus + label {
+  top: px(-20);
+  font-size: px(11);
+  letter-spacing: 0.3px;
+  color: #dddad7;
+}
+
+input:focus {
+  border-bottom: px(1) solid #debfa5;
+}
+
+
+.icon-plus {
+  padding-left: px(30);
+  background: url('../img/plus-solid.svg') no-repeat center left;
+  background-size: px(12) px(12);
+
+}
+
+label {
+  position: absolute;
+  top: px(2);
+  left: 0;
+  text-transform: uppercase;
+  font-size: px(14);
+  line-height: 1;
+  letter-spacing: px(1.5);
+  transition: top 0.3s;
+  display: block;
+  width: 100%;
+}
+
+.modal-send-content {
+  text-align: center;
+  .modal-title {
+    margin-top: px(129);
+  }
+}
+
+.ok-content {
+  width: px(827);
+  margin: 0 auto;
+  line-height: 2;
+  font-size: px(16);
+
+}
+
 .modal-link {
   color: $yellow;
   font-size: px(16);
+  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: px(1.5);
   position: relative;
   // margin-left: px(20);
   // display: flex;
+  transition: 0.3s;
   // align-items: center;
   &::before {
     color: #16284A;
@@ -230,6 +337,10 @@ a:active {
     // content: '+';
     // margin-top: px(5);
     font-size: px(20);
+  }
+
+  &:hover {
+    color: $main-color;
   }
 }
 
@@ -323,18 +434,89 @@ a:active {
   position: relative;
 }
 
+
+.forms {
+  width: px(800);
+  margin: 0 auto;
+  padding-top: px(80);
+
+
+}
+
 .a-icon {
   position: absolute;
   top: 50%;
-  left: 5.35rem;
-  z-index: -1;
-  width: 2.7rem;
+  left: 5.93rem;
+  z-index: 2;
+  width: 3rem;
   transform: translateY(-50%);
-  height: 3.5rem;
-  background: url(../img/a_big.svg) no-repeat center center;
+  height: 3rem;
+  background: url(../img/group.png) no-repeat center center;
   -webkit-background-size: contain;
   background-size: contain;
 }
+
+// .a-icon-bluer {
+//     display: block;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     position: absolute;
+//     z-index: 1;
+//     width: 2.7rem;
+//     // transform: translateY(-50%);
+//     height: 3.5rem;
+//     background: url('../img/a_blured.png') no-repeat center center;
+//     -webkit-background-size: contain;
+//     background-size: contain;
+
+// }
+
+
+.docs-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  li {
+    width: 33.3%;
+    padding: 0 px(32);
+    margin-bottom: px(25);
+  }
+}
+
+.docs-item {
+  // opacity: 0.5;
+  background-color: #F6F5F4;
+  display: flex;
+
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  font-weight: normal;
+  padding: px(48) px(30);
+  color: #16284a;
+  line-height: 1.45;
+  letter-spacing: px(0.3);
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  p {
+    text-align: center;
+    padding: 0 px(55);
+  }
+
+  img {
+    display: block;
+    margin-bottom: px(10);
+    width: px(25);
+    height: px(30);
+  }
+
+
+}
+
+
 
 .right-col {
   width: px(800);
@@ -345,6 +527,11 @@ a:active {
     display: none;
   }
   &.open-map {
+
+    .skew-overlay {
+      z-index: 5;
+    }
+
     #map {
       display: block;
     }
@@ -358,7 +545,7 @@ a:active {
   display: flex;
   position: absolute;
   align-items: center;
-  bottom: px(20);
+  bottom: px(10);
   left: px(30);
 
   img {
@@ -431,9 +618,11 @@ a:active {
   background-color: #fff;
   position: absolute;
   top: 50%;
+  overflow-y: auto;
   transition: 0.3s;
-  width: 80%;
-  height: 70vh;
+  padding: px(60) px(60);
+  width: px(1200);
+  height: px(600);
   left: 50%;
   transform: translate(-50%, -40%);
 
@@ -442,13 +631,67 @@ a:active {
 .title-form {
   color: $main-color;
   text-transform: uppercase;
+
+}
+
+.modal-title {
+  margin-bottom: px(36);
+  text-transform: uppercase;
+}
+
+
+.modal-btn {
+  cursor: pointer;
 }
 
 .modal-close {
   position: absolute;
   right: px(15);
   top: px(15);
+  cursor: pointer;
   background: url('../img/if_basics-22_296812.svg') no-repeat center center;
   width: px(20);
   height: px(20);
 }
+
+.modal-title {
+  font-size: px(28);
+}
+
+.btn-inner {
+  text-align: center;
+  padding-top: 20px;
+  button {
+
+    background-color: $main-color;
+    border: none;
+    padding: px(24) px(88) px(24) px(88);
+    color: #fff;
+    text-transform: uppercase;
+
+  }
+}
+
+
+// display: block;
+//     width: 100%;
+//     cursor: pointer;
+//     padding: 0;
+//     position: absolute;
+//     left: .19rem;
+//     top: .17rem;
+//     font-size: .12rem;
+//     font-weight: bold;
+//     font-style: normal;
+//     font-stretch: normal;
+//     line-height: 1.83;
+//     letter-spacing: .014rem;
+//     color: #111815;
+//     text-transform: uppercase;
+//     -webkit-transform-origin: 0 100%;
+//     transform-origin: 0 100%;
+//     transition: top .5s ease, opacity .5s ease, -webkit-transform .5s ease;
+//     transition: top .5s ease, opacity .5s ease, transform .5s ease;
+//     transition: top .5s ease, opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
+//     pointer-events: none;
+// }

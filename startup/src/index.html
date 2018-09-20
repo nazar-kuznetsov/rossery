@@ -2,14 +2,15 @@
 <html lang="ru">
 
 <head>
-  <title>Название Документа</title>
+  <title>НОВЫЙ АВТОГРАФ</title>
   <meta charset="UTF-8">
   <!-- Description of the site -->
   <meta name="description" content="Описание">
   <meta name="keywords" content="Ключевые Слова">
   <meta name="author" content="Nazar Kuznetsov">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon"> -->
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -44,7 +45,8 @@
               а домівку
             </h1>
             <div class="modal-send">
-              <a data-modal="#form-modal" class="modal-link modal-btn" href="#">залишити заявку</a>
+              <span data-modal="#form-modal" class="modal-link icon-plus modal-btn">залишити
+                заявку</span>
             </div>
           </div>
         </div>
@@ -53,7 +55,7 @@
         <div class="bottom-page">
           <div class="logo">
             <a href="#">
-              <img src="./img/dim_logo.png" alt=""></a>
+              <img src="./img/DIM_Logo.svg" alt=""></a>
           </div>
           <ul class="social">
             <li><a href="#">
@@ -94,32 +96,101 @@
 
   </div>
 
+  <div class="a-icon-bluer">
+
+  </div>
+
   <div id="form-modal" class="overlay-modal">
     <div class="modal">
-      <p class="title-form">оставить заявку</p>
+      <p class="modal-title">Оставить заявку</p>
       <div class="modal-close"></div>
-      <form action="#" method="POST">
-        <div>
-          <p></p>
-          <input type="text">
+      <form class="forms" action="#" method="POST">
+        <div class="form-group">
+
+          <div class="form-col">
+            <input id="input-name" type="text">
+            <label for="input-name">Имя</label>
+          </div>
         </div>
         <div class="form-group">
-          <div><input type="text"></div>
-          <div><input type="text"></div>
+
+          <div class="form-col">
+            <input id="input-email" type="text">
+            <label for="input-email">E-MAIL</label>
+          </div>
+          <div class="form-col">
+            <input id="input-tel" class="tel" type="text">
+            <label class="label-tel" for="input-tel">ваш номер телефона</label>
+            <span class="base-tel">+380</span>
+          </div>
         </div>
-        <button>Отправить</button>
+        <div class="btn-inner">
+          <button id="btn-done" data-modal="#docs-success" class="modal-btn">Отправить</button>
+        </div>
       </form>
     </div>
   </div>
 
   <div id="docs-modal" class="overlay-modal">
-      <div class="modal">
-        <p class="title-form">Документы</p>
-        <div class="modal-close"></div>
+    <div class="modal">
+      <p class="modal-title">Документы</p>
+      <div class="docs-container">
+        <ul class="docs-list">
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" download class="docs-item">
+              <img src="./img/pdf-svg.svg" alt="">
+              <p>План комплекса (15 MB)</p>
+            </a>
+          </li>
+        </ul>
       </div>
+      <div class="modal-close"></div>
     </div>
+  </div>
+
+  <div id="docs-success" class="overlay-modal">
+    <div class="modal modal-send-content">
+      <p class="modal-title">Спасибо! Мы приняли вашу заявку</p>
+      <div class="ok-content">
+          <p>Вітаємо всіх українців з Днем Конституції! Звертаємо вашу увагу, що з нагоди свята відділи продажу житлових комплексів DIM group працюватимуть за наступним графіком...</p>
+      </div>
+      <div class="modal-close"></div>
+    </div>
+  </div>
 
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKqbrvha4p20QERUocxfrpfESrUarPZuQ"></script>
   <script defer src="js/scripts.min.js"></script>
 </body>
