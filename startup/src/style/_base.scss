@@ -570,13 +570,28 @@ label {
   margin-left: px(88);
   a {
     &:not(:first-child) {
-      margin-left: px(50);
+      margin-left: px(40);
     }
   }
-  img {
+  i {
     width: px(20);
     height: px(15);
     display: block;
+    font-size: px(18);
+    transition: 0.3s;
+    color: $main-color;
+  }
+}
+
+.fa-facebook:hover {
+  &::before {
+    color: #228be6;
+  }
+}
+
+.fa-youtube:hover {
+  &::before {
+    color: #FF0000;
   }
 }
 
