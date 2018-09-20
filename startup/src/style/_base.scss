@@ -583,6 +583,24 @@ label {
   }
 }
 
+.btn-docs::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: px(1);
+  width: 0;
+  background: $main-color;
+  transition: 0.3s;
+}
+
+.btn-docs:hover {
+  &::after {
+    width: 100%;
+  }
+}
+
+
 .fa-facebook:hover {
   &::before {
     color: #228be6;
