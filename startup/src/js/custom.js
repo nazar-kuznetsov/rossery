@@ -108,31 +108,31 @@ btnDone.addEventListener('click', function () {
 
 
 
-// var tel = document.querySelector('.tel');
-// tel.addEventListener('keydown', function (e) {
-//   if (tel.value.length > 10) {
-//     tel.value = tel.value.substr(0, 11);
-//   }
+var tel = document.querySelector('.tel');
+tel.addEventListener('keydown', function (e) {
+  if (tel.value.length > 10) {
+    tel.value = tel.value.substr(0, 11);
+  }
 
-//   var key = e.keyCode;
-//   var len = e.target.value.length;
-//   if (key === 8) return;
+  var key = e.keyCode;
+  var len = e.target.value.length;
+  if (key === 8) return;
 
-//   switch (len) {
-//     case 2:
-//       tel.value += ' ';
-//       break;
-//     case 6:
-//       tel.value += ' ';
-//       break;
-//     case 9:
-//       tel.value += ' ';
-//       break;
-//   }
+  switch (len) {
+    case 2:
+      tel.value += ' ';
+      break;
+    case 6:
+      tel.value += ' ';
+      break;
+    case 9:
+      tel.value += ' ';
+      break;
+  }
 
 
 
-// })
+})
 
 // tel.addEventListener('input', function () {
 //   this.value = this.value.replace(/^\.|[^\d\.]|\.(?=.*\.)|^0+(?=\d)/g, '');

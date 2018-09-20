@@ -10,7 +10,7 @@ input {
   line-height: 1;
   letter-spacing: px(1.5);
   color: #16284a;
-  padding-bottom: px(10);
+  padding-bottom: px(10) !important;
 }
 
 
@@ -245,14 +245,14 @@ a:active {
         color: #dddad7;
       }
 
-      // input {
-      //   border-bottom: px(1) solid #debfa5;
-      // }
+     .base-tel {
+       display: block;
+     }
     }
     input {
       display: block;
       width: 100%;
-      padding: px(5) 0;
+      padding: px(5);
     }
   }
 }
@@ -261,10 +261,16 @@ a:active {
   // padding-left: px(40);
 }
 
+.tel-input {
+  padding-left: px(40) !important;
+}
+
 .base-tel {
-  display: none;
+   display: none;
   position: absolute;
-  top: 0;
+  top:px(6);
+  left: 0;
+  // font-weight: bold;
   color: #debfa5;
 }
 
@@ -273,6 +279,10 @@ input:focus + label {
   font-size: px(11);
   letter-spacing: 0.3px;
   color: #dddad7;
+}
+
+input:focus + label + span {
+  display: block;
 }
 
 input:focus {
@@ -289,7 +299,6 @@ input:focus {
 
 label {
   position: absolute;
-  top: px(2);
   left: 0;
   text-transform: uppercase;
   font-size: px(14);
@@ -298,6 +307,7 @@ label {
   transition: top 0.3s;
   display: block;
   width: 100%;
+  top: px(6);
 }
 
 .modal-send-content {
