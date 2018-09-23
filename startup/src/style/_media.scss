@@ -1,9 +1,19 @@
-@media #{$xl} { // 1170px
+@media #{$xl} { // 1120
 
+  .right-col {
+    width: 9rem;
+    margin-right: -3rem;
+  }
+
+  .docs {
+    margin-left: 1.2rem;
+  }
 }
 
-@media #{$lg} { // 992px
-
+@media #{$lg} { // 835px
+  .docs {
+    margin-left: .8rem;
+  }
 }
 
 @media #{$md} { // 768px

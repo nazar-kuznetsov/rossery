@@ -88,8 +88,10 @@ gulp.task('js:build', function () {
    // .pipe(rigger()) //Прогоним через rigger
     gulp.src([
         'src/libs/jquery/jquery.min.js', //============================== Jquery
-        'src/libs/slick/slick.min.js', //================================ slick-slider
-        'src/libs/liMarquee/jquery.liMarquee.js',
+        'src/js/libs/parallax.js',
+        // 'src/js/libs/jquery.event.frame.js',
+        // 'src/libs/slick/slick.min.js', //================================ slick-slider
+        // 'src/libs/liMarquee/jquery.liMarquee.js',
        // 'src/libs/jquery-validate/jquery.validate.min.js', //============ jquery-validate
         //'src/libs/table-sorter/jquery.tablesorter.min.js', //========== table-sorter
         //'src/libs/wow-js/wow.min.js', //=============================== wow-js
@@ -105,7 +107,7 @@ gulp.task('js:build', function () {
          }))
         .on('error', notify.onError())
         //.pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
+        //.pipe(sourcemaps.write()) //Пропишем карты
         .pipe(rename('scripts.min.js'))
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({
