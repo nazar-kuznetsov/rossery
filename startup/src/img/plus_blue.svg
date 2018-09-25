@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>plus_blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="0.Zaglushka" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="zaglushka_adaptive" transform="translate(-32.000000, -528.000000)" fill="#16284A" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(32.000000, 528.000000)">
+                <g id="Button">
+                    <path d="M10,10 L10,8.69808718e-15 L12,9.06548122e-15 L12,10 L22,10 L22,12 L12,12 L12,22 L10,22 L10,12 L0,12 L0,10 L10,10 Z" id="plus_blue"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

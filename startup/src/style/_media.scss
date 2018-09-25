@@ -21,6 +21,221 @@
 }
 
 @media #{$sm} { // 578px
+  html {
+    height: auto;
+    min-height: 100vh;
+    font-size: 25.94vw;;
+  }
+
+  body {
+    overflow: visible;
+  }
+
+  .page {
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .main-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .center {
+    position: static;
+    transform: none;
+  }
+
+  .left-col,
+  .right-col {
+    width: 100%;
+  }
+
+  .right-col {
+    margin-top: 65px;
+  }
+
+  .left-col {
+    order: 5;
+
+    .container {
+      padding-left: 30px;
+      position: static;
+    }
+  }
+
+  .modal-send {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    border-top: 1px solid #EDEBE8;
+
+    span {
+      display: block;
+      font-size: 16px;
+
+      padding: 24px 30px;
+
+    }
+
+    .icon-plus {
+      background: url(../img/plus-solid.svg) no-repeat 40px center;
+      background-size: 20px 20px;
+    }
+
+
+  }
+
+
+  .skew-overlay {
+    transform: none;
+  }
+
+  .skew-overlay-content {
+    height: 320px;
+    transform: none;
+  }
+
+  .a-icon {
+    display: none;
+  }
+
+  .date {
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .bottom-page {
+    display: none;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    padding: 0;
+  }
+
+
+  .new-autograf {
+    // display: flex;
+    display: inline-block;
+    // vertical-align: middle;
+  }
+
+  .new-autograf::after {
+    content: '';
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin: 0 2px 0 4px;
+    text-align: right;
+  }
+
+  .main-title {
+    max-width: 290px;
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+
+
+
+
+  .load .new-autograf::after {
+    width: 20px;
+    height: 1px;
+  }
+
+  .header-contact {
+    display: none;
+  }
+
+  .header-logo {
+    margin-left: 15px;
+    img {
+      width: 125px;
+    }
+  }
+
+  .header-location {
+    height: 100%;
+    padding: 22px 26px;
+    margin-left: auto;
+    a {
+      text-indent: -99999px;
+    }
+    border-radius: 0;
+    border-left: 1px solid #edebe8;;
+    border-right: 1px solid #edebe8;;
+
+    &:after {
+      width: 12px;
+      height: 16px;
+      right: auto;
+    }
+  }
+
+
+  .btn-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 65px;
+    background-color: #fff;
+
+    span {
+      height: 2px;
+      background-color: #16284a;
+      margin-bottom: 4px;
+
+      // margin: 0 auto;
+      &:nth-child(1) {
+        width: 16px;
+        transform: translateX(-50%);
+
+      }
+
+      &:nth-child(2) {
+        width: 32px;
+      }
+
+    }
+
+
+
+  }
+
+
+  .mobile-content {
+    display: block !important;
+  }
+
+  .mobile-content-center {
+    // max-width: 230px;
+    padding-right: 70px;
+
+  }
+
+  .mobile__docs::after {
+    transform: none !important;
+  }
+
+  html {
+    overflow: visible;
+  }
+
+
+
 
 }
 

@@ -2,15 +2,18 @@
 <html lang="ru">
 
 <head>
-  <title>Новий Автограф</title>
+  <title>Новий Автограф - коплекс для життя</title>
   <meta charset="UTF-8">
   <!-- Description of the site -->
+  <!-- <meta http-equiv="cache-control" content="no-cache"> -->
   <meta name="description" content="Новий Автограф - Місце, де обирають не квартиру,а домівку">
   <meta name="keywords" content="Ключевые Слова">
   <meta name="author" content="Назар Кузнецов +38-066-946-92-27">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/favicon.ico.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,8 +34,12 @@
             </ul>
           </div>
           <div id="btn-map-change" class="header-location">
-            <a href="http://">
+            <a href="http://">На мапі
             </a>
+          </div>
+          <div class="btn-menu">
+            <span></span>
+            <span></span>
           </div>
         </header>
         <div class="container">
@@ -41,7 +48,7 @@
             <h1 class="main-title">
               <p class="new-autograf">Новий Автограф</p>
               Місце, де обирають не квартиру,
-              а домівку
+                а домівку
             </h1>
             <div class="modal-send">
               <span data-modal="#form-modal" class="modal-link icon-plus btn-docs modal-btn">залишити
@@ -57,11 +64,11 @@
               <img src="./img/Logo_DIM.svg" alt=""></a>
           </div>
           <ul class="social">
-            <li><a href="#">
-                <a href="https://www.facebook.com/novyi.avtograf/" target="_blank"><i class="fa fa-facebook"></i></a>
-              </a></li>
-              <li><a href="https://www.instagram.com/novyi.avtograf/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://t.me/novyi_avtograf" target="_blank"><i class="fa fa-telegram"></i></a></li>
+            <li><a href="#"><a href="https://www.facebook.com/novyi.avtograf/"
+                  target="_blank"><i class="fa fa-facebook"></i></a></a></li>
+            <li><a href="https://www.instagram.com/novyi.avtograf/" target="_blank"><i
+                  class="fa fa-instagram"></i></a></li>
+            <li><a href="https://t.me/novyi_avtograf" target="_blank"><i class="fa fa-telegram"></i></a></li>
           </ul>
 
           <div class="docs">
@@ -100,7 +107,7 @@
       <p class="modal-title">залишити заявку</p>
       <div class="modal-close"></div>
       <form id="form" class="forms">
-
+        <input type="text" name="required" class="req-input">
         <div class="form-group">
           <div class="form-col">
             <input data-validate="name" id="input-name" name="names" type="text">
@@ -110,12 +117,13 @@
 
         <div class="form-group">
           <div class="form-col">
-            <input data-validate="email" name="email" id="input-email" type="text" >
+            <input data-validate="email" name="email" id="input-email" type="text">
             <label for="input-email">E-MAIL</label>
           </div>
 
           <div class="form-col">
-            <input data-validate="tel" id="input-tel" name="tel" class="tel tel-input" type="text">
+            <input data-validate="tel" id="input-tel" name="tel" class="tel tel-input"
+              type="text">
             <label class="label-tel" for="input-tel">Ваш номер телефону</label>
             <span class="base-tel">+380</span>
           </div>
@@ -181,7 +189,9 @@
     <div class="modal modal-send-content">
       <p class="modal-title">ДЯКУЄМО! МИ Отримали ВАШУ ЗАЯВКУ</p>
       <div class="ok-content">
-          <p>Вітаємо всіх українців з Днем Конституції! Звертаємо вашу увагу, що з нагоди свята відділи продажу житлових комплексів DIM group працюватимуть за наступним графіком...</p>
+        <p>Вітаємо всіх українців з Днем Конституції! Звертаємо вашу увагу, що
+          з нагоди свята відділи продажу житлових комплексів DIM group
+          працюватимуть за наступним графіком...</p>
       </div>
       <div class="btn-inner btn-inner-close">
         <button id="btn-done" data-modal="#docs-success" class="main-button btn-end">закрити</button>
@@ -192,13 +202,77 @@
   </div>
 
 
-  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKqbrvha4p20QERUocxfrpfESrUarPZuQ"></script>
-  <script defer src="js/scripts.min.js"></script>
+  <div class="mobile-menu">
+
+
+
+    <div class="mobile-top">
+      <div class="mobile__logo">
+        <a href="#">
+          <img src="./img/logo-white.svg" alt="">
+        </a>
+      </div>
+      <div class="mobile-close"></div>
+    </div>
+
+    <div class="mobile-content">
+      <div class="mobile__docs">
+        <p>документацiя</p>
+      </div>
+
+      <div class="mobile-content-center">
+
+
+
+      <h4 class="mobile-title">Адреса</h4>
+      <p class="mobile-text">вул. Генерала Жмаченка 26, Київ, Україна</p>
+
+      <h4 class="mobile-title">Номер телефона</h4>
+      <p class="mobile-text">(044) 500 23 23 (9:00 — 18:00)</p>
+
+      <h4 class="mobile-title">e-mail</h4>
+      <p class="mobile-text">newavtograf@gmail.com</p>
+
+
+      </div>
+
+      <div class="mobile-media">
+          <ul class="social">
+              <li>
+                <a href="#"><a href="https://www.facebook.com/novyi.avtograf/"
+                    target="_blank"><i class="fa fa-facebook"></i></a>
+                  </a></li>
+              <li><a href="https://www.instagram.com/novyi.avtograf/" target="_blank"><i
+                    class="fa fa-instagram"></i></a></li>
+              <li><a href="https://t.me/novyi_avtograf" target="_blank"><i class="fa fa-telegram"></i></a></li>
+            </ul>
+            <div class="mobile-logo__dim">
+              <a href=""><img src="./img/dim_light.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+    <p class="btn-mobile-form">залишити заявку</p>
+
+  </div>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKqbrvha4p20QERUocxfrpfESrUarPZuQ"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
 
 
 <!--
-1. Почта с куда будет отправляться письма с заявками?
--->
+  Адаптировать модальные окно
+  в меню мобильной сделать активные ссылки на модальные окна
+  проверить от чего появляеться скролл при загрузки на мобильном
+  сделать что-то с падингом на location
+  курсор на крестик мобильном и кнопка открыть меню
+  узнать у Шика можно ли выключить апаралакс на мобильном если нет то попробывать сделать его на мобильном
+  изменить позицию главной картинку по удачнее
+  Попросить у дизайнера что бы переделал иконку
+  добавить икноку плюсик в меню мобильном документы
+  настроит задержку анимации на мобильно везде
+ -->
