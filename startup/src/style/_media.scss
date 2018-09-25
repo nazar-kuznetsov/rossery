@@ -60,9 +60,34 @@
     order: 5;
 
     .container {
-      padding-left: 30px;
+      padding: 0;
       position: static;
     }
+  }
+
+  .ok-content {
+    width: auto;
+    margin-bottom: 35px;
+  }
+
+  .skew-overlay-content {
+    width: 7rem;
+  }
+
+  .bgimg {
+    background-position: left 5%;
+  }
+
+  .modal-send-content .modal-title {
+    margin-top: 0;
+  }
+
+  .error-massage {
+    font-size: 12px;
+  }
+
+  .load .header-location {
+    transition-delay: 2s;
   }
 
   .modal-send {
@@ -106,6 +131,7 @@
   .date {
     font-size: 11px;
     font-weight: bold;
+    padding: 15px 30px 0 30px;
   }
 
   .bottom-page {
@@ -115,12 +141,57 @@
   .header {
     position: absolute;
     top: 0;
+    height: 65px;
     left: 0;
     width: 100%;
     justify-content: space-between;
-    height: auto;
     padding: 0;
   }
+
+  .overlay-modal {
+    padding: 0 15px;
+  }
+
+  .modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    // max-width: 560px;
+  //  margin: 0 30px;
+    height: auto;
+    padding: 35px 20px;
+  }
+
+  .btn-docs::after {
+    content: none;
+  }
+
+  input {
+    border-width: 1px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    // margin-bottom: 0;
+    // margin-bottom: 0;
+    margin: 0;
+  }
+
+  .form-col {
+    margin: 0 !important;
+    margin-bottom: 50px !important;
+  }
+
+  .forms {
+    width: auto;
+    padding-top: 15px;
+  }
+
+  .modal-title {
+    padding-top: 15px;
+  }
+
 
 
   .new-autograf {
@@ -143,6 +214,8 @@
     max-width: 290px;
     font-size: 20px;
     flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0 30px 30px 30px;
   }
 
 
@@ -226,8 +299,46 @@
 
   }
 
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .docs-item p {
+    font-size: 12px;
+  }
+
   .mobile__docs::after {
     transform: none !important;
+  }
+
+
+  .docs-item {
+   padding: 30px;
+  }
+
+  .docs-list {
+    flex-direction: column;
+    li {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+      min-height: auto;
+    }
+  }
+
+  .docs-list li:hover {
+    transform: translateY(0);
+  }
+
+
+
+  .btn-inner {
+    padding-top: 0;
+  }
+
+  .modal {
+    overflow-y: scroll;
+    height: 500px;
   }
 
   html {
@@ -240,5 +351,15 @@
 }
 
 @media #{$xs} { // 450px
+  .skew-overlay {
+    transform: skew(0);
+  }
 
+  .skew-overlay-content {
+     transform: skew(0);
+  }
+
+  .a-icon {
+    left: 5.2rem;
+  }
 }

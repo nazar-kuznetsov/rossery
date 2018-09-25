@@ -86,6 +86,7 @@ body {
 
 .btn-menu {
   display: none;
+  cursor: pointer;
 }
 
 img {
@@ -260,13 +261,17 @@ a:active {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 50px;
+
+    p {
+      padding: 15px 0;
+    }
+    margin-bottom: 40px;
     &:after {
       position: absolute;
       content: '';
       width: 176px;
       height: 1px;
-      margin-top: 15px;
+      // margin-top: 15px;
       transform: translateX(-40px);
       // margin: 0 auto;
       opacity: 0.1;
@@ -278,6 +283,7 @@ a:active {
     display: block;
     background: url('../img/close_white.svg') no-repeat center center;
     height: 16px;
+    cursor: pointer;
     width: 16px;
   }
 
@@ -1102,7 +1108,7 @@ label {
 
 .overlay-modal {
   position: fixed;
-  z-index: 10;
+  z-index: 13;
   top: 0;
   left: 0;
 

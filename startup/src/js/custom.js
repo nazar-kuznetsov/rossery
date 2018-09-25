@@ -83,6 +83,14 @@ $(window).ready(function () {
   var modalBtn = document.querySelectorAll('.modal-btn');
   var closeBtn = document.querySelectorAll('.modal-close');
 
+  var mobileDocs = document.querySelector('#mobile-docs');
+
+  mobileDocs.addEventListener('click', getModal);
+
+  var moBileBtn = document.querySelector('.btn-mobile-form');
+
+  moBileBtn.addEventListener('click', getModal);
+
   var overlay = document.querySelectorAll('.overlay-modal');
 
   overlay.forEach(function (element) {
@@ -111,6 +119,7 @@ $(window).ready(function () {
 
   function getModal(e) {
     e.preventDefault();
+    console.log(123);
     var id = this.getAttribute('data-modal');
     openModal(id);
   }
